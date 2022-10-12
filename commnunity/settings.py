@@ -93,10 +93,10 @@ WSGI_APPLICATION = 'commnunity.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'community',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': '127.0.0.1',
+        'NAME': os.environ['db_name'],
+        'USER': os.environ['db_user'],
+        'PASSWORD': os.environ['db_password'],
+        'HOST': os.environ['db_host'],
         'PORT': '5432',
     }
 }
